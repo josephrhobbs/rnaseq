@@ -1,5 +1,7 @@
 # The RNASEQ Toolkit 
 
+![Rust](https://github.com/josephrhobbs/rnaseq/actions/workflows/rust.yml/badge.svg)
+
 A highly efficient, open-source software tool for next-generation RNA sequencing.
 
 __WIP Notice__: The RNASEQ Toolkit is under heavy development and is not yet stable.
