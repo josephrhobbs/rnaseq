@@ -71,6 +71,7 @@ impl Cigar {
                 "s" | "S" => SoftClipping (count),
                 "h" | "H" => HardClipping (count),
                 "="       => Match (count),
+                "n" | "N" => Deletion (count),
                 "x" | "X" => Mismatch (count),
                 _ => return Err (RnaseqError::InvalidCigarOp (tokens[i].to_owned())),
             };
@@ -94,10 +95,10 @@ pub enum CigarPair {
     /// Alignment column contains mismatched base pairs.
     Mismatch (usize),
 
-    /// Deletion (gap in target sequence).
+    /// Deletion (gap in query sequence).
     Deletion (usize),
 
-    /// Insertion (gap in query sequence).
+    /// Insertion (gap in reference sequence).
     Insertion (usize),
 
     /// Segment of query sequence does not appear in alignment, but full-length query is given.

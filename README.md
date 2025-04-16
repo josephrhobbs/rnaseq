@@ -18,3 +18,7 @@ Since the advent of next-generation RNA-Seq in the first decade of the 21st cent
 ## Licensing
 
 The RNASEQ Toolkit is developed and maintained by Joseph Hobbs and is made open-source under the terms of the __MIT License__.  See `LICENSE` for more information.
+
+## Credits
+
+The `REFERENCES` file contains various sources through which this toolkit was constructed.  Thank you to the authors of each source, for this project would be impossible without their research and publications.

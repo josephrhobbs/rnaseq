@@ -1,1 +1,14 @@
+# Build artifacts
 /target
+
+# SAM and BAM files
+**/*.sam
+**/*.bam
+
+# GFF files
+**/*.gff
+**/*.gff3
+
+# Raw genomics data
+**/*.tsv
+**/*.csv

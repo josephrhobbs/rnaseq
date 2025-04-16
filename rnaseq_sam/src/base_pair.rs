@@ -19,6 +19,9 @@ pub enum BasePair {
 
     /// Guanine (pairs with RNA Cytosine).
     Guanine,
+
+    /// Unknown base pair.
+    Unknown,
 }
 
 impl TryFrom<char> for BasePair {
@@ -31,6 +34,7 @@ impl TryFrom<char> for BasePair {
             't' | 'T' => Ok (Thymine),
             'c' | 'C' => Ok (Cytosine),
             'g' | 'G' => Ok (Guanine),
+            'n' | 'N' => Ok (Unknown),
             _         => Err (RnaseqError::InvalidBasePair (c)),
         }
     }

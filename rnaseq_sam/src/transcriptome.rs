@@ -9,6 +9,7 @@ use crate::Alignment;
 #[derive(Clone, Debug)]
 /// Abstraction over an organism's transcriptome.
 pub struct Transcriptome {
+    /// Sequence Alignment/Map file header.
     pub header: String,
 
     /// Sequence of alignment lines.
@@ -21,6 +22,7 @@ impl Transcriptome {
         let lines = ascii.split('\n');
 
         // File header
+        // TODO actually parse the header properly
         let mut header = String::new();
 
         // Alignments
