@@ -1,0 +1,7 @@
+[package]
+name = "rnaseq_sam"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies.rnaseq_err]
+path = "../rnaseq_err"
