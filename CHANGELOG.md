@@ -2,4 +2,5 @@
 
 ## v0.1.0 (under development)
 
-Not yet released.
+- Implement Sequence Alignment/Map (SAM) file parsing
+- Implement error handling
