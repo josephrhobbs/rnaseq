@@ -170,7 +170,7 @@ impl Alignment {
 
 #[test]
 fn construct_alignment_line() {
-    let raw = "HSW-ST330:304:H045HADXX:20934#0\t16\tchr1\t60023\t50\t100M\t*\t0\t0\tCCACTATGTTTTTCGATAAAAAGCTTAATAAAT\t?????BBBBBDBDB=?FFECFACCFFHHH>09C";
+    let raw = "1:497:R:-272+13M17D24M	113	1	497	37	37M	15	100338662	0	CGGGTCTGACCTGAGGAGAACTGTGCTCCGCCTTCAG	0;==-==9;>>>>>=>>>>>>>>>>>=>>>>>>>>>>	XT:A:U	NM:i:0	SM:i:37	AM:i:0	X0:i:1	X1:i:0	XM:i:0	XO:i:0	XG:i:0	MD:Z:37";
 
     let alignment = Alignment::from(raw);
 
