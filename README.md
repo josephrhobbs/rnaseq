@@ -15,7 +15,9 @@ The RNASEQ Toolkit:
 
 ## Purpose
 
-Since the advent of next-generation RNA-Seq in the first decade of the 21st century, the amount of publicly available transcriptomic data from biomedical research has increased dramatically.  This data has incredible potential to reveal differential gene expression and potential drug targets.  This toolkit is developed with the particular intention to support cardiac muscle tissue engineering research.
+Since the advent of next-generation RNA sequencing technologies in the first decade of the 21st century, the amount of publicly available transcriptomic data from biomedical research has increased dramatically.  This data has incredible potential to reveal differential gene expressions and therefore potential drug targets.  This toolkit is developed with the particular intention to support cardiac muscle tissue engineering research.
+
+Using these RNASEQ bioinformatics tools, tissue engineering researchers will be able to effectively identify drug targets to increase the maturity of engineered cardiac tissues.  We hope these drug targets will accelerate research in human cardiac therapeutics.
 
 ## Licensing
 
