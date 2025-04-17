@@ -11,3 +11,5 @@
 [NCBI: Should We Abandon the _t_-Test?](https://pmc.ncbi.nlm.nih.gov/articles/PMC2933223/)
 
 [Trimmed Mean of M-Values Normalization Method](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-3-r25)
+
+[GFF3 File Format Explanation](https://learn.gencore.bio.nyu.edu/ngs-file-formats/gff3-format/)

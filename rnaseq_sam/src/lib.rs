@@ -23,7 +23,7 @@ pub use sequence::Sequence;
 pub use transcriptome::Transcriptome;
 
 /// One-based leftmost position mapping.
-type Position = u32;
+pub type Position = u32;
 
 /// Mapping position Phred quality score.
 type MappingQuality = u8;

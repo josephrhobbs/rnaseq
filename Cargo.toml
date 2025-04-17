@@ -2,6 +2,7 @@
 resolver = "2"
 members = [
     "rnaseq_err",
+    "rnaseq_gff",
     "rnaseq_sam",
 ]
 
@@ -9,6 +10,9 @@ members = [
 name = "rnaseq"
 version = "0.1.0"
 edition = "2024"
+
+[dependencies.rnaseq_gff]
+path = "./rnaseq_gff"
 
 [dependencies.rnaseq_sam]
 path = "./rnaseq_sam"

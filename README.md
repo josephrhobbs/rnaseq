@@ -21,7 +21,7 @@ Using these RNASEQ bioinformatics tools, tissue engineering researchers will be 
 
 ## Licensing
 
-The RNASEQ Toolkit is developed and maintained by Joseph Hobbs and is made open-source under the terms of the __MIT License__.  See `LICENSE` for more information.
+The RNASEQ Toolkit is developed and maintained by Joseph Hobbs.  All source code and documentation files in this repository are made open-source under the terms of the __MIT License__.  See `LICENSE` for more information.
 
 ## Credits
 

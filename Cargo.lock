@@ -6,12 +6,21 @@ version = 4
 name = "rnaseq"
 version = "0.1.0"
 dependencies = [
+ "rnaseq_gff",
  "rnaseq_sam",
 ]
 
 [[package]]
 name = "rnaseq_err"
 version = "0.1.0"
+
+[[package]]
+name = "rnaseq_gff"
+version = "0.1.0"
+dependencies = [
+ "rnaseq_err",
+ "rnaseq_sam",
+]
 
 [[package]]
 name = "rnaseq_sam"

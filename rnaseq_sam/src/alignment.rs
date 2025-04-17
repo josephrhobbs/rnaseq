@@ -172,7 +172,7 @@ impl Alignment {
 fn parse_alignment_line() {
     let raw = "1:497:R:-272+13M17D24M	113	1	497	37	37M	15	100338662	0	CGGGTCTGACCTGAGGAGAACTGTGCTCCGCCTTCAG	0;==-==9;>>>>>=>>>>>>>>>>>=>>>>>>>>>>	XT:A:U	NM:i:0	SM:i:37	AM:i:0	X0:i:1	X1:i:0	XM:i:0	XO:i:0	XG:i:0	MD:Z:37";
 
-    let alignment = Alignment::from(RAW);
+    let alignment = Alignment::from(raw);
 
     // Make sure this is OK
     assert!(alignment.is_ok());

@@ -1,0 +1,10 @@
+[package]
+name = "rnaseq_gff"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies.rnaseq_err]
+path = "../rnaseq_err"
+
+[dependencies.rnaseq_sam]
+path = "../rnaseq_sam"
