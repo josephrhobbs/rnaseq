@@ -113,7 +113,15 @@ impl Feature {
         let raw_attributes = fields[8].split(';').collect::<Vec<&str>>();
         let mut attributes = HashMap::<String, String>::new();
         for key_value in raw_attributes {
+            // Split across equals sign
             let split = key_value.split('=').collect::<Vec<&str>>();
+
+            // Skip invalid entries
+            if split.len() < 2 {
+                continue;
+            }
+
+            // Store valid entries in a hash map
             let (key, value) = (split[0], split[1]);
             attributes.insert(key.to_string(), value.to_string());
         }
