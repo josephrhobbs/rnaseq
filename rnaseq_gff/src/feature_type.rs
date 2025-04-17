@@ -5,7 +5,7 @@ use rnaseq_err::{
     RnaseqResult,
 };
 
-#[derive(Clone, Copy, Debug)]
+#[derive(Clone, Copy, PartialEq, Debug)]
 /// Abstraction over feature types.
 /// 
 /// Currently, the RNASEQ Toolkit only supports processing genes.  This may change in the future depending on development requirements.

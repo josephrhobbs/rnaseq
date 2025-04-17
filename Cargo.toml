@@ -11,6 +11,9 @@ name = "rnaseq"
 version = "0.1.0"
 edition = "2024"
 
+[dependencies]
+indicatif = "0.17.11"
+
 [dependencies.rnaseq_gff]
 path = "./rnaseq_gff"
 

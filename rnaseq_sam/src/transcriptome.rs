@@ -19,14 +19,14 @@ pub struct Transcriptome {
 impl Transcriptome {
     /// Construct a transcriptome from an ASCII Sequence Alignment/Map file.
     pub fn from(ascii: &str) -> RnaseqResult<Self> {
-        let lines = ascii.split('\n');
+        let lines = ascii.split('\n').collect::<Vec<&str>>();
 
         // File header
         // TODO actually parse the header properly
         let mut header = String::new();
 
         // Alignments
-        let mut alignments = Vec::new();
+        let mut alignments = Vec::<Alignment>::with_capacity(lines.len());
 
         for line in lines {
             if line.chars().nth(0) == Some ('@') {
