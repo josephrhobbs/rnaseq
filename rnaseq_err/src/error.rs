@@ -8,6 +8,9 @@ pub enum RnaseqError {
     /// Invalid base pair (character found).
     InvalidBasePair (char),
 
+    /// Invalid base pair binary (data found).
+    InvalidBasePairBinary (u8),
+
     /// Mismatched quality sequence (sequence length, quality length).
     MismatchedQualitySequence (usize, usize),
 

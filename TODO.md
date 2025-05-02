@@ -6,6 +6,10 @@
 - [x] Implement CIGAR string parsing
 - [x] Implement base-pair parsing
 - [ ] Implement GFF file parsing
+- [ ] Implement BAM file parsing
+- [ ] Implement BAM file reduction
+- [ ] Implement GFF file reduction
+- [ ] Implement file streaming
 
 ## Gene Expression
 - [ ] Implement gene expression analysis

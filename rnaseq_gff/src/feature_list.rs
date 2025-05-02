@@ -6,8 +6,6 @@ use rnaseq_err::{
 
 use crate::Feature;
 
-use crate::FeatureType;
-
 #[derive(Clone, Debug)]
 /// Abstraction over a genomic feature list.
 pub struct FeatureList {
@@ -16,8 +14,8 @@ pub struct FeatureList {
 }
 
 impl FeatureList {
-    /// Construct a feature list from an input ASCII file.
-    pub fn from(ascii: &str) -> RnaseqResult<Self> {
+    /// Construct a feature list from an input ASCII string.
+    fn features(ascii: &str) -> RnaseqResult<Vec<Feature>> {
         // Break file into lines
         let lines = ascii.split('\n').collect::<Vec<&str>>();
 
@@ -33,19 +31,23 @@ impl FeatureList {
             // Parse this line
             let feature = Feature::from(&line)?;
 
-            // TODO remove this line
-            if feature.feature_type != Some (FeatureType::Gene) {
-                continue;
-            }
-
             features.push(feature);
         }
 
         // TODO implement bisection search for linear time complexity, not log-linear
         features.sort_by(|f1, f2| f1.start.cmp(&f2.start));
 
+        Ok (features)
+    }
+
+    /// Construct a `FeatureList` structure from an input ASCII string, subject to a given
+    ///     filter constraint `check`.
+    pub fn from(ascii: &str, check: fn(&Feature) -> bool) -> RnaseqResult<Self> {
+        // Get features
+        let features = Self::features(ascii)?;
+
         Ok (Self {
-            features,
+            features: features.into_iter().filter(|f: &Feature| check(f)).collect::<Vec<Feature>>(),
         })
     }
 }

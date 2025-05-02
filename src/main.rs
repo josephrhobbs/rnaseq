@@ -7,7 +7,10 @@ use std::{
     time::Instant,
 };
 
-use rnaseq_gff::FeatureList;
+use rnaseq_gff::{
+    FeatureList,
+    FeatureType,
+};
 
 use rnaseq_sam::Transcriptome;
 
@@ -34,7 +37,7 @@ fn main() {
     let gff3_fname = args[2].clone();
     let start = Instant::now();
     let raw = read_to_string(gff3_fname).expect("Couldn't open GFF3 file");
-    let feature_list = FeatureList::from(&raw).unwrap();
+    let feature_list = FeatureList::from(&raw, |f| f.feature_type == Some (FeatureType::Gene)).unwrap();
     let end = start.elapsed();
     println!("Parsed {} features in {:.3} ms", feature_list.features.len(), end.as_micros() as f64 / 1000.0);
     println!();
@@ -76,6 +79,8 @@ fn main() {
         }
     }
     let end = start.elapsed();
+
+    println!("{:#?}", expressions);
 
     println!("Calculated expression of {} genes in {:.3} ms", expressions.len(), end.as_micros() as f64 / 1000.0);
 }

@@ -1,8 +1,6 @@
 //! Transcriptome abstraction.
 
-use rnaseq_err::{
-    RnaseqResult,
-};
+use rnaseq_err::RnaseqResult;
 
 use crate::Alignment;
 
@@ -49,6 +47,22 @@ impl Transcriptome {
         })
     }
 }
+
+// /// Convert this transcriptome into a reduced binary format for easier analysis.
+// impl From<Transcriptome> for Vec<u8> {
+//     fn from(transcriptome: Transcriptome) -> Self {
+//         todo!()
+//     }
+// }
+
+// /// Construct this transcriptome from a reduced binary format for easier analysis.
+// impl TryFrom<Vec<u8>> for Transcriptome {
+//     type Error = RnaseqError;
+
+//     fn try_from(binary: Vec<u8>) -> RnaseqResult<Self> {
+//         todo!()
+//     }
+// }
 
 #[cfg(test)]
 const EXAMPLE_SAM: &str = include_str!("../example.sam");
