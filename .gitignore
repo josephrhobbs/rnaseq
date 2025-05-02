@@ -12,3 +12,9 @@
 # Raw genomics data
 **/*.tsv
 **/*.csv
+
+# LaTeX build artifacts
+**/*.aux
+**/*.log
+**/*.synctex.gz
+**/*.toc
