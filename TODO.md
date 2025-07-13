@@ -10,6 +10,8 @@
 - [ ] Implement BAM file reduction
 - [ ] Implement GFF file reduction
 - [ ] Implement file streaming
+- [ ] Implement pretty CLI
+- [ ] Implement logging
 
 ## Gene Expression
 - [ ] Implement gene expression analysis
@@ -18,4 +20,4 @@
 - [ ] Implement differential expression analysis
 
 ## Statistical Tests
-- [ ] Implement statistical tests
+- [ ] Implement statistical tests for differential expression

@@ -23,7 +23,7 @@ impl FeatureList {
         let mut features = Vec::<Feature>::with_capacity(lines.len());
 
         for line in lines {
-            // Check for comments and empty lines
+            // Ignore comments and empty lines
             if line.starts_with("#") || line.len() == 0 {
                 continue;
             }
@@ -34,7 +34,7 @@ impl FeatureList {
             features.push(feature);
         }
 
-        // TODO implement bisection search for linear time complexity, not log-linear
+        // TODO implement bisection search for improved time complexity
         features.sort_by(|f1, f2| f1.start.cmp(&f2.start));
 
         Ok (features)

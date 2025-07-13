@@ -78,6 +78,12 @@ fn main() {
             }            
         }
     }
+
+    // Convert to RPKM
+    let mut rpkm = HashMap::<String, f64>::new();
+    for (gene, expression) in rpkm.iter() {
+        
+    }
     let end = start.elapsed();
 
     println!("{:#?}", expressions);
